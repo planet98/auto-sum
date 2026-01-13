@@ -1,5 +1,6 @@
+
 {
-  "name": "LuminaLit: Phage & Bio-Research AI Assistant",
-  "description": "An advanced academic literature reading tool powered by Gemini 3 Pro, specializing in paper summarization and Phage Display Peptide Technology analysis.",
+  "name": "LuminaLit: Phage & Bio-Research AI Assistant (DeepSeek R1)",
+  "description": "由 DeepSeek-R1 (671B) 强力驱动的学术文献助手，深度分析科研论文并专项强化噬菌体展示技术。",
   "requestFramePermissions": []
 }
