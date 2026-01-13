@@ -1,0 +1,5 @@
+{
+  "name": "LuminaLit: Phage & Bio-Research AI Assistant",
+  "description": "An advanced academic literature reading tool powered by Gemini 3 Pro, specializing in paper summarization and Phage Display Peptide Technology analysis.",
+  "requestFramePermissions": []
+}
