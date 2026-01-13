@@ -70,10 +70,10 @@ const App: React.FC = () => {
           <div className="space-y-12 animate-in fade-in duration-500">
             <div className="text-center space-y-4">
               <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">
-                DeepSeek-R1 学术助手
+                DeepSeek-R1 文献解析
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                使用中科院 Uni-API 深度解析科研论文，专项优化噬菌体展示肽技术。
+                中科院 Uni-API 强力驱动，针对噬菌体展示肽技术进行专项深度解析。
               </p>
             </div>
             <FileUpload onFileSelect={handleFileSelect} isLoading={false} />
@@ -84,14 +84,14 @@ const App: React.FC = () => {
           <div className="flex flex-col items-center justify-center py-20 space-y-6">
             <div className="relative">
               <div className="w-24 h-24 border-4 border-slate-200 rounded-full"></div>
-              <div className="w-24 h-24 border-4 border-slate-900 rounded-full border-t-transparent animate-spin absolute top-0"></div>
+              <div className="w-24 h-24 border-4 border-indigo-600 rounded-full border-t-transparent animate-spin absolute top-0"></div>
             </div>
             <div className="text-center space-y-2">
               <h3 className="text-2xl font-bold text-slate-800">
-                {state.status === ProcessingStatus.READING_PDF ? '正在读取 PDF...' : 'DeepSeek-R1 正在深度思考...'}
+                {state.status === ProcessingStatus.READING_PDF ? '正在读取 PDF...' : 'DeepSeek-R1 正在思考...'}
               </h3>
               <p className="text-slate-500 animate-pulse">
-                正在解析: <span className="font-medium text-slate-700">{state.fileName}</span>
+                解析文件: <span className="font-medium text-slate-700">{state.fileName}</span>
               </p>
             </div>
           </div>
@@ -105,11 +105,12 @@ const App: React.FC = () => {
               </svg>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-red-800">请求失败</h3>
-              <p className="text-red-600 text-sm">{state.error}</p>
+              <h3 className="text-xl font-bold text-red-800">分析中断</h3>
+              <p className="text-red-600 text-sm whitespace-pre-wrap">{state.error}</p>
+              <p className="text-xs text-red-400 mt-2 italic">提示：请确保在 Cloudflare 设置了 API_KEY 环境变量</p>
             </div>
             <button onClick={reset} className="px-6 py-2 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800">
-              返回重试
+              重试上传
             </button>
           </div>
         )}
@@ -120,9 +121,9 @@ const App: React.FC = () => {
               <details className="bg-white/60 border border-slate-200 rounded-3xl p-6 shadow-sm group transition-all">
                 <summary className="text-sm font-bold text-slate-400 cursor-pointer list-none flex items-center gap-2 select-none">
                   <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-                  查看 DeepSeek-R1 的思考链路 (Chain of Thought)
+                  查看 DeepSeek-R1 推理过程 (CoT)
                 </summary>
-                <div className="mt-4 text-xs text-slate-400 font-mono whitespace-pre-wrap leading-relaxed border-t border-slate-100 pt-4">
+                <div className="mt-4 text-xs text-slate-400 font-mono whitespace-pre-wrap leading-relaxed border-t border-slate-100 pt-4 max-h-60 overflow-y-auto">
                   {state.reasoning}
                 </div>
               </details>

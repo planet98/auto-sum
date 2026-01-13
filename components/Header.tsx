@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <div className="flex gap-4 text-xs font-bold text-slate-400 items-center">
            <span className="px-3 py-1 bg-slate-100 rounded-full">Uni-API (中科院)</span>
            <div className="w-1 h-1 bg-slate-300 rounded-full"></div>
-           <span className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full">671B 推理模型</span>
+           <span className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full">DeepSeek-R1 (671B)</span>
         </div>
       </div>
     </header>

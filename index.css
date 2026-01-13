@@ -1,0 +1,6 @@
+
+/* 此文件用于消除部署时的 MIME 类型错误提示 */
+body {
+  margin: 0;
+  padding: 0;
+}
